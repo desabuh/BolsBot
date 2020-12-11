@@ -1,20 +1,15 @@
 package DiscBot;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+
 
 
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 
 import org.apache.commons.math3.util.Pair;
 import org.apache.log4j.BasicConfigurator;
 
-import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
-import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
@@ -25,23 +20,8 @@ import Listener.ReactionAddEventListener;
 import Listener.VoiceStateUpdateEventListener;
 import command.CommandInvoker;
 import command.CommandType;
-import command.DisconnectCommand;
-import command.JoinCommand;
-import command.PlayCommand;
-import command.SkipTrackCommand;
-import discord4j.common.util.Snowflake;
 import discord4j.core.DiscordClientBuilder;
 import discord4j.core.GatewayDiscordClient;
-import discord4j.core.event.domain.VoiceStateUpdateEvent;
-import discord4j.core.event.domain.lifecycle.ReadyEvent;
-import discord4j.core.event.domain.message.MessageCreateEvent;
-import discord4j.core.object.VoiceState;
-import discord4j.core.object.entity.Member;
-import discord4j.core.object.entity.User;
-import discord4j.core.object.entity.channel.VoiceChannel;
-import discord4j.voice.AudioProvider;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 import utils.EventListenerRegistry;
 
 
@@ -53,7 +33,7 @@ public class MainDisc {
 	private static final Map<String, Command> commands = new HashMap<>();
 	// Creates AudioPlayer instances and translates URLs to AudioTrack instances
 	public static final AudioPlayerManager PLAYER_MANAGER = new DefaultAudioPlayerManager();
-	public static final String TOKEN = "";
+	public static final String TOKEN = "NzE4OTM4MDc3OTY3Njc5NTU4.XtwJQw.bahhVirka5s-9BsJthFisOGqRuU";
 	
 	
 	

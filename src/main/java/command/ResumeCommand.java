@@ -11,7 +11,7 @@ public class ResumeCommand implements Command{
 		return Mono.justOrEmpty(event.getGuildId())
 				.map(GuildAudioManager::of)
 				.map(manager -> manager.getAudioTrackScheduler())
-				.map(scheduler -> scheduler.resume())
+				.doOnSuccess(scheduler -> scheduler.resume())
 				.doOnError(e -> e.printStackTrace())
 				.then();	
 								

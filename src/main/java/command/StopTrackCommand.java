@@ -11,7 +11,7 @@ public class StopTrackCommand implements Command{
 		return Mono.justOrEmpty(event.getGuildId())
 				.map(GuildAudioManager::of)
 				.map(manager -> manager.getAudioTrackScheduler())
-				.map(scheduler -> scheduler.stop())
+				.doOnSuccess(scheduler -> scheduler.stop())
 				.doOnError(e -> e.printStackTrace())
 				.then();
 	}

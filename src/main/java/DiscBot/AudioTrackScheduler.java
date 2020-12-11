@@ -50,16 +50,14 @@ public final class AudioTrackScheduler extends AudioEventAdapter{
 		return Mono.empty();
 	}
 	
-	public Mono<Void> resume() {
+	public void resume() {
 		if(this.player.isPaused()) {
 			this.player.setPaused(false);
 		}
-		return Mono.empty();
 	}
 	
-	public Mono<Void> stop() {
+	public void stop() {
 		this.player.destroy();
-		return Mono.empty();
 	}
 	
 	
