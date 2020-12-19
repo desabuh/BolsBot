@@ -1,6 +1,7 @@
-package command;
+package command.music;
 
 import DiscBot.GuildAudioManager;
+import command.Command;
 import discord4j.core.event.domain.message.MessageCreateEvent;
 import reactor.core.publisher.Mono;
 

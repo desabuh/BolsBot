@@ -1,8 +1,8 @@
-package command;
+package command.connection;
 
 
 import DiscBot.GuildAudioManager;
-
+import command.Command;
 import discord4j.core.event.domain.message.MessageCreateEvent;
 import discord4j.core.object.VoiceState;
 import discord4j.core.object.entity.Member;

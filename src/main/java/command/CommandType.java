@@ -2,6 +2,14 @@ package command;
 
 import java.util.function.Supplier;
 
+import command.connection.DisconnectCommand;
+import command.connection.JoinCommand;
+import command.music.PauseCommand;
+import command.music.PlayCommand;
+import command.music.ResumeCommand;
+import command.music.SkipTrackCommand;
+import command.music.StopTrackCommand;
+
 public enum CommandType {
 	
 	

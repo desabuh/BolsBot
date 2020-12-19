@@ -1,9 +1,10 @@
-package command;
+package command.music;
 
 import java.util.Arrays;
 
 
 import DiscBot.TrackLoadScheduler;
+import command.Command;
 import discord4j.core.event.domain.message.MessageCreateEvent;
 import reactor.core.publisher.Mono;
 import static DiscBot.MainDisc.PLAYER_MANAGER;

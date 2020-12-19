@@ -33,7 +33,7 @@ public class MainDisc {
 	private static final Map<String, Command> commands = new HashMap<>();
 	// Creates AudioPlayer instances and translates URLs to AudioTrack instances
 	public static final AudioPlayerManager PLAYER_MANAGER = new DefaultAudioPlayerManager();
-	public static final String TOKEN = "NzE4OTM4MDc3OTY3Njc5NTU4.XtwJQw.bahhVirka5s-9BsJthFisOGqRuU";
+	public static final String TOKEN = "";
 	
 	
 	
