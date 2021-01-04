@@ -5,11 +5,14 @@ package DiscBot;
 
 
 import java.util.HashMap;
+
 import java.util.Map;
 
 import org.apache.commons.math3.util.Pair;
 import org.apache.log4j.BasicConfigurator;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
@@ -22,6 +25,7 @@ import command.CommandInvoker;
 import command.CommandType;
 import discord4j.core.DiscordClientBuilder;
 import discord4j.core.GatewayDiscordClient;
+import guiceModules.GatewayClientModule;
 import utils.EventListenerRegistry;
 
 
@@ -61,10 +65,11 @@ public class MainDisc {
 
 		
 		
-		GatewayDiscordClient client = DiscordClientBuilder.create(TOKEN)
-		         .build()
-		         .login()
-		         .block();
+		Injector injector = Guice.createInjector(new GatewayClientModule());
+		
+		GatewayDiscordClient client = injector.getInstance(GatewayDiscordClient.class);
+
+		
 		
 		EventListenerRegistry.register(client, new MessageCreateEventListener());
 		EventListenerRegistry.register(client, new VoiceStateUpdateEventListener());
