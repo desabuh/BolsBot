@@ -1,9 +1,7 @@
 package Listener;
 
-import DiscBot.GuildAudioManager;
-import discord4j.core.GatewayDiscordClient;
+
 import discord4j.core.event.domain.VoiceStateUpdateEvent;
-import discord4j.core.object.VoiceState;
 import reactor.core.publisher.Mono;
 
 public class VoiceStateUpdateEventListener implements EventListener<VoiceStateUpdateEvent>{

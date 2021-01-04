@@ -10,8 +10,6 @@ public abstract class AbstractCommand implements Command{
 	@Override
 	public abstract Mono<Void> execute(MessageCreateEvent event);
 	
-	public boolean requestedPermission(MessageCreateEvent event) {
-		
-	}
+
 	
 }

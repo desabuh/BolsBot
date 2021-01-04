@@ -11,7 +11,6 @@ public class EventListenerRegistry {
 	public static <T extends Event> void register(GatewayDiscordClient client, EventListener<T> listener) {
 		client.getEventDispatcher().on((Class<T>) listener.getEventType())
 									.flatMap(event -> listener.execute(event))
-						//			.next()
 									.subscribe();				
 	}
 	
